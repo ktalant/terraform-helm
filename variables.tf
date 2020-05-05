@@ -1,4 +1,4 @@
-variable "traefik.dashboard.domain" {
+variable "traefik_dashboard_domain" {
     default = "traefik.example.com"
 }
 
