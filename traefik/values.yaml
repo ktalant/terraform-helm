@@ -359,7 +359,7 @@ acme:
     # existingClaim:
 dashboard:
   enabled: true
-  domain: ${traefik_domain}
+  domain: ${traefik_dashboard_domain}
   # serviceType: ClusterIP
   service: {}
     # annotations:
@@ -373,9 +373,9 @@ dashboard:
       # - hosts:
       #   - traefik.example.com
       #   secretName: traefik-default-cert
-  auth:
+  auth: 
     basic:
-      ${username}: ${password}
+      ${traefik_dashboard_username}: {traefik_dashboard_password}
   statistics: {}
     ## Number of recent errors to show in the ‘Health’ tab
     # recentErrors:
@@ -422,7 +422,7 @@ accessLogs:
       names: {}
         # Authorization: redact
 rbac:
-  enabled: true
+  enabled: true 
 ## Enable the /metrics endpoint, for now only supports prometheus
 ## set to true to enable metric collection by prometheus
 metrics:
